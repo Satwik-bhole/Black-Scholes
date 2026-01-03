@@ -20,9 +20,11 @@ def sim_cev(S,r,sgm,gamma,t,n_p,n_s):
         Z=np.random.normal(0,1,n_p)
         out[:,i+1]=np.maximum(out[:,i]+(r*out[:,i]*dt)+(sgm*(out[:,i]**gamma)*(np.sqrt(dt)*Z)),(10**(-8)))
     return out
+
 test_gamma=[0.5,1,1.5]
 colors={0.5:"blue",1:"green",1.5:"red"}
 fig,axes=plt.subplots(3,1,figsize=(12,12),sharex=True)
+
 for ax,g in zip(axes,test_gamma):
     p=sim_cev(S_0,R,vol_i,g,T,n_paths,n_steps)
     time=np.linspace(0,1,253)
