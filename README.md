@@ -36,6 +36,7 @@
       - Times steps per path:- 252 (n_steps)
       - Gamma for which calculation and simulation were done:- [0.5,1,1.5]
       - Random seed was kept fixed at 42 for reproductibility
+      - Implemented all required functions in function.py file
       - Estimated stock price using paramters given in assignemnt
       - Calculated the standard error in pricing for each gamma
       - Reported the 95% confidence interval for the price calculated
